@@ -33,6 +33,9 @@ export const ContextProvider = (props) => {
   const clickHandler = (clicked) => {
     setIsClicked({ ...initialState, [clicked]: true });
   };
+  const closeClickHandler = (clicked) => {
+    setIsClicked({ ...initialState, [clicked]: false });
+  };
 
   return (
     <StateContext.Provider
@@ -46,7 +49,7 @@ export const ContextProvider = (props) => {
         themeSetting,
         setThemeSetting,
         modeHandler,
-        colorHandler,themeMode, themeColor
+        colorHandler,themeMode, themeColor, closeClickHandler
       }}
     >
       {props.children}

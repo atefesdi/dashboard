@@ -2,12 +2,12 @@ import React, { useContext, useEffect } from 'react'
 import { AiOutlineMenu } from 'react-icons/ai'
 import { FiShoppingCart } from 'react-icons/fi'
 import { BsChatLeft } from 'react-icons/bs'
-import { RiNotification3Line } from 'react-icons/ri'
+
 import { MdKeyboardArrowDown } from 'react-icons/md'
 import { TooltipComponent } from '@syncfusion/ej2-react-popups'
 
 import avatar from '../data/avatar.jpg'
-import { Cart, Chat, Notification, UserProfile } from '.'
+import { Cart, Chat, UserProfile } from '.'
 import StateContext from '../context/ContextProvider'
 
 const NavButton = ({ color, dotColor, customFunc, title, icon }) => {
@@ -17,7 +17,7 @@ const NavButton = ({ color, dotColor, customFunc, title, icon }) => {
         type='button'
         onClick={() => customFunc()}
         style={{ color }}
-        className='relative text-xl rounded-full p-3 hover:bg-light-gray'
+        className='relative text-xl rounded-full p-3 hover:bg-light-gray dark:hover:bg-gray-700 m-1'
       >
         <span
           style={{ background: dotColor }}
@@ -72,21 +72,15 @@ const Navbar = () => {
         />
         <NavButton
           title='Chat'
-          dotColor='#03C9D7'
+          dotColor='rgb(254, 201, 15)'
           customFunc={() => ctx.clickHandler('chat')}
           color={ctx.themeColor}
           icon={<BsChatLeft />}
         />
-        <NavButton
-          title='Notification'
-          dotColor='rgb(254, 201, 15)'
-          customFunc={() => ctx.clickHandler('notification')}
-          color={ctx.themeColor}
-          icon={<RiNotification3Line />}
-        />
+    
         <TooltipComponent content='Profile' position='BottomCenter'>
           <div
-            className='flex items-center gap-2 cursor-pointer p-1 hover:bg-light-gray rounded-lg '
+            className='flex items-center gap-2 cursor-pointer py-1 px-3 hover:bg-light-gray rounded-lg dark:hover:bg-gray-700 justify-center  m-1'
             onClick={() => ctx.clickHandler('userProfile')}
           >
             <img

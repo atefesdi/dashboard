@@ -543,10 +543,6 @@ export const links = [
         icon: <RiStockLine />,
       },
       {
-        name: 'color-mapping',
-        icon: <BsBarChart />,
-      },
-      {
         name: 'pyramid',
         icon: <GiLouvrePyramid />,
       },
@@ -558,13 +554,15 @@ export const links = [
   },
 ];
 
-export const cartData = [
+export let cartData = [
   {
     image:
       product5,
     name: 'butterscotch ice-cream',
     category: 'Milk product',
     price: '$250',
+    count: 0,
+    id: "1"
   },
   {
     image:
@@ -572,6 +570,8 @@ export const cartData = [
     name: 'Supreme fresh tomato',
     category: 'Vegetable Item',
     price: '$450',
+    count: 0,
+    id: "2"
   },
   {
     image:
@@ -579,6 +579,8 @@ export const cartData = [
     name: 'Red color candy',
     category: 'Food Item',
     price: '$190',
+    count: 0,
+    id: "3"
   },
 ];
 
@@ -604,13 +606,7 @@ export const chatData = [
     desc: 'Check your earnings',
     time: '4:39 AM',
   },
-  {
-    image:
-      avatar,
-    message: 'Jolly completed tasks',
-    desc: 'Assign her new tasks',
-    time: '1:12 AM',
-  },
+ 
 ];
 
 export const earningData = [
